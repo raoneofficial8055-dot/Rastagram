@@ -2,139 +2,193 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>body{
-    background-color: rgb(0, 0, 0);
-}
-.c1{
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>login-Rastagram</title>
+  <link rel="shortcut icon" href="ChatGPT Image Nov 10, 2025, 02_54_07 PM (1) (1).png"
+    type="image/x-icon">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
 
-  color:white;
-  font-family:serif;
-  text-align: center;
-  font-size: 50px;
+    .container {
+      background-color: rgba(20, 20, 20, 0.7);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(63, 63, 164, 0.5);
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
 
-}
-.input{
-    position: relative;
-    left: 620px;
-    nav-down: auto;
-    background-color: #111;
-    width: 290px;
-    height: 20px;
-    border: whitesmoke;
-    border-radius: 5px;
-    color: white;
-    padding: 10px;
-    margin: 5px 0;
-    box-shadow: 2px 2px 5px rgb(63, 63, 164) ;
-}
-.navi{
+    .c1 {
+      font-size: 45px;
+      margin-bottom: 25px;
+      color: white;
+    }
 
-     background-color: rgb(63, 63, 164);
-     color: rgb(208, 200, 200);
-     width: 295px;
-     height: 40px;
-     border-radius: 20px;
-    position: relative;
-    left: 625px;
-}
-.navi:hover{
-    background-color: rgb(79, 79, 239);
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-}
-.c9{
-    color: gray;
-    position: relative;
-    left: 620px;
-    top: -50px
-}
-.c8{
-   
-    color: rgb(69, 155, 231);
-    position: relative;
-    left: 710px;
-    top: 50px;
-    text-decoration: none
+    .input {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: none;
+      background-color: #111;
+      color: white;
+      transition: 0.4s;
+      font-size: 15px;
+    }
 
+    .input:focus {
+      box-shadow: 0 0 20px rgb(63, 63, 164);
+      transform: scale(1.03);
+      outline: none;
+    }
 
+    .navi {
+      background-color: rgb(63, 63, 164);
+      color: rgb(208, 200, 200);
+      width: 100%;
+      height: 40px;
+      border-radius: 20px;
+      border: none;
+      margin-top: 10px;
+      font-size: 16px;
+      transition: 0.4s;
+    }
 
-}
-.b9{
-    color: white;
-    text-decoration: none;
-    position: relative;
-    left: 720px;
+    .navi:hover {
+      background-color: rgb(255, 77, 90);
+      cursor: pointer;
+      color: white;
+      transform: scale(1.08);
+      box-shadow: 0 0 25px 5px rgba(0, 255, 255, 0.6);
+    }
 
+    .divider {
+      color: gray;
+      margin: 25px 0 15px;
+    }
 
-}
-.b9:hover{
-    text-decoration: underline;
-}
-.image1{
-    width: 25px;
-    height: 25px;
-    position: relative;
-    left: 630px;
-    top: -112px;
-}
-.dont{
-    color: gray;
-    position: relative;
-    left: 660px;
-    top: 45px;
-}
-.sign{
-    color: rgb(49, 108, 196);
-    position: relative;
-    left: 815px;
-    top: -07px;
-}
-</style>
-    <link rel="shortcut icon" href="WhatsApp_Image_2025-11-04_at_09.25.25_ca862f2f-removebg-preview.png"
-        type="image/x-icon">
-    <title>login-Rastagram</title>
+    .c8 {
+      color: rgb(69, 155, 231);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .c8:hover {
+      text-decoration: underline;
+    }
+
+    .b9 {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .b9:hover {
+      text-decoration: underline;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      margin-top: 15px;
+    }
+
+    .social img {
+      width: 22px;
+      height: 22px;
+    }
+
+    .signup {
+      margin-top: 20px;
+      color: gray;
+      font-size: 14px;
+    }
+
+    .signup a {
+      color: rgb(49, 108, 196);
+      text-decoration: none;
+      margin-left: 5px;
+    }
+
+    .signup a:hover {
+      text-decoration: underline;
+    }
+
+    /* 📱 Responsive tweaks */
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      .c1 {
+        font-size: 35px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
     <h1 class="c1">Rastagram</h1>
 
     <form>
-        <label id="l1">
-            <input class="input" type="text" placeholder="Phone number, username or email" />
-            <br>
-            <br>
-            <input class="input" type="password" placeholder="Password" />
-        </label id="l2">
-        <br>
-        <br>
-        <label>
-            <button class="navi" type="submit">Log In</button>
-        </label>
-        <br>
-        <br>
+      <input class="input" type="text" placeholder="Phone number, username or email" required>
+      <input class="input" type="password" placeholder="Password" required>
+      <button class="navi" type="submit">Log In</button>
+
+      <div class="social">
+        <img src="icons8-facebook-48.png" alt="facebook logo">
         <a class="c8" href="https://www.facebook.com/" target="_blank">Login with Facebook</a>
-        <h4 class="c9">--------------------------- or ---------------------------</h4>
-        <label>
-            <a class="b9" href="https://www.instagram.com/accounts/password/reset/" target="_blank">forgot password?</a>
-        </label>
-        <label>
-            <h4 class="dont">Dont have an account</h4>
+      </div>
 
-        </label>
-        <a class="sign" href="https://www.instagram.com/accounts/emailsignup">Sign up</a>
-        <img class="image1" src="icons8-facebook-48.png" alt="facebook logo" />
+      <div class="divider">--------------------------- or ---------------------------</div>
 
+      <a class="b9" href="https://www.instagram.com/accounts/password/reset/" target="_blank">Forgot password?</a>
 
-
-
-
-
-
-
+      <div class="signup">
+        Don’t have an account?
+        <a href="https://www.instagram.com/accounts/emailsignup" target="_blank">Sign up</a>
+      </div>
     </form>
+  </div>
 
+  <!-- 🔊 Audio Files -->
+  <audio id="focusSound" src="futuristic-noises-236386.mp3" preload="auto"></audio>
+  <audio id="clickSound" src="button-305770.mp3" preload="auto"></audio>
+
+  <script>
+    const inputBoxes = document.querySelectorAll('.input');
+    const button = document.querySelector('.navi');
+    const focusSound = document.getElementById('focusSound');
+    const clickSound = document.getElementById('clickSound');
+
+    inputBoxes.forEach(box => {
+      box.addEventListener('focus', () => {
+        focusSound.currentTime = 0;
+        focusSound.play();
+      });
+    });
+
+    button.addEventListener('click', (e) => {
+      e.preventDefault(); // stop default reload
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  </script>
 </body>
 
 </html>
